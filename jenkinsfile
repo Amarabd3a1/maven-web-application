@@ -14,5 +14,10 @@ pipeline {
                 git branch: 'development', credentialsId: 'b0b15d11-374f-47fe-bcf9-b13de95ef540', url: 'https://github.com/Amarabd3a1/maven-web-application.git'
             }
         }
+    stage('build'){
+      steps{
+      sh "mvn clean package"
+       }
+     }
     }
 }
